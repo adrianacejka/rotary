@@ -1,12 +1,21 @@
-.header-wrapper {
-    width: 1160px;
+:root {
+    --black: #2E2A24;
+    --black75: #625F5B;
+    --black25: #C8C6C1;
+    --black5: #F4F3F2;
+    --white: #FFFFFF;
+    --primary-color: #00488C;
+    --secondary-color: #F6AA1C;
+    --akcent: #9DDFD3;
+    --primary-gradient: linear-gradient(123.1deg, #003261 12.28%, #001F3C 78.14%);
+    --secondary-gradient: linear-gradient(268.24deg, #9DDFD3 17.32%, #3D968B 99.34%);
 }
+
 
 html {
-    /*font-size: 62.5%;*/
+    font-size: 62.5%; /* 1em = 10px */
 }
 
-  
 *, 
 ::before, 
 ::after {
@@ -15,31 +24,92 @@ html {
     margin: 0;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--black);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-body {
-    font-size: 1em;
+/*-----------------------------*/
+
+/* header styling start */
+
+.rotary-logo {
+    cursor: pointer;
 }
 
-/*  --- pokud nemá obsah přesahovat (jednu) obrazovku ---
+.main-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 0 10px;
+    color: var(--black75);
+}
 
-body {
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-} 
-*/
+.main-menu ul li:last-of-type {
+    padding: 0 0 0 10px;
+}
+
+.rotary-int {
+    padding: 8px 24px;
+    color: var(--black5);
+    background: var(--primary-gradient);
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-weight: 400;
+    border-radius: 20px;
+}
+
+.wrapper {
+    max-width: 1120px;
+    border: 1px solid red;
+    margin: auto;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+
+}
+
+header {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+}
+
+.main-menu {
+    display: flex;
+}
+
+/* header styling end */
 
 .hero {
+    height: 100vh;
     background-color: black;
+    background-image: url(images/praha-pozadi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
 }
 
 .hero-wrapper {
-    border: 1px solid red;
-    width: 1000px;
-    height: 100%;
-    margin: auto;
+    max-width: 1120px;
+    height: 100vh;
 }
+
+

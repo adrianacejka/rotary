@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <title>Rotary Klub Praha</title>
     <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
     <header>
-        <div class="header-wrapper">
-            <img src="logo/rotary-logo.svg" alt="logo Rotary klubu" class="logo-rotary" width="120">
+        <div class="wrapper header-wrapper">
+            <a href="#home"><img class="rotary-logo" src="logo/rotary-logo.svg" alt="logo Rotary klubu" class="logo-rotary" width="120"></a>
             <nav class="main-menu">
                 <ul>
-                    <li><a href="#">kdo jsme</a></li>
-                    <li><a href="#">projekty a aktuality</a></li>
-                    <li><a href="#">kontakty</a></li>
-                    <li><a href="https://www.rotary.org/en" target="_blank">rotary international</a></li>
+                    <li><a href="#kdo-jsme">kdo jsme</a></li>
+                    <li><a href="#projekty-aktuality">projekty a aktuality</a></li>
+                    <li><a href="#kontakty">kontakty</a></li>
+                    <li><a class="rotary-int" href="https://www.rotary.org/en" target="_blank">rotary international</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        
-        <section class="hero">
-            <div class="hero-wrapper">
+
+        <section class="hero" id="home">
+            <div class="wrapper hero-wrapper">
                 <p>Rotary Klub Praha</p>
                 <h1>
                 Chceme lepší svět. <br>
@@ -37,7 +43,7 @@
         </section>
                 
         <section id="kdo-jsme">
-            <div class="kdo-jsme-wrapper">
+            <div class="wrapper kdo-jsme-wrapper">
                 <h2>Kdo jsme</h2>
                 <p>Přípravné práce na založení prvního Rotary klubu v Československu byly zahájeny již v roce 1924. První informační schůzka se konala na Pražském hradě 14. září 1924. Inaugurace Rotary klubu Praha se konala v Obecním domě 14. září 1925. Řádným členem rodiny Rotary klubů pod číslem 2143 se stal RC Praha 19. října 1925.</p>
                 <p>V roce 1938 měl RC Praha již 110 členů. Činnost klubu byla ukončena 25. srpna 1939 v návaznosti na zákaz činnosti Rotary po německé okupaci. Činnost RC Praha byla na krátkou dobu obnovena 8. října 1945. V roce 1947 měl klub 82 členů. Klub opět zanikl po únorovém komunistickém puči 28. června 1948.</p>
@@ -48,7 +54,7 @@
         </section>
 
         <section id="projekty-aktuality">
-            <div class="projekty-aktuality-wrapper">
+            <div class="wrapper projekty-aktuality-wrapper">
                 <h2>Pomáháme s radostí (mise & vize)</h2>
                 <div class="card mise-vize">
                     <img class="ikona-mise-vize" src="icons/globe.svg" width="90">
@@ -74,7 +80,7 @@
             
             
         <section id="kontakty">
-            <div class="kontacts-wraper">
+            <div class="wrapper kontacts-wraper">
                 <h2>Kontakty</h2>
                 <div class="contacts">
                     <div class="contact-card one">
@@ -136,21 +142,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="distrikt2240">
+                    <img src="logo/rotary-distrikt-2240-logo.svg" class="logo-distrikt2240" width="240">
+                    <a href="https://www.rotary2240.org/cs/" target="_blank">Navštivte web Rotary Distrikt 2240</a>
+                </div>
             </div>
-            <div class="distrikt2240">
-                <img src="logo/rotary-distrikt-2240-logo.svg" class="logo-distrikt2240" width="240">
-                <a href="https://www.rotary2240.org/cs/" target="_blank">Navštivte web Rotary Distrikt 2240</a>
-            </div>
+            
         </section>
         
     </main>
     <footer>
-        <div class="footer-wrapper">
+        <div class="wrapper distrikt2240-wrapper">
             <div class="footer-left">
                 Sledujte nás <a href="#"><img src="icons/facebook.svg" width="50">facebook</a>
             </div>
             <div class="footer-right">
-                <a href="#"></a>
+                <a href="#">Nahoru</a>
             </div>
         </div>
     </footer>
