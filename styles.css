@@ -38,12 +38,30 @@ a {
     color: inherit;
 }
 
+.wrapper {
+    max-width: 1120px;
+    border: 1px solid red;
+    margin: auto;
+}
 /*-----------------------------*/
 
 /* header styling start */
 
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+
+}
+
 .rotary-logo {
     cursor: pointer;
+}
+
+.main-menu {
+    display: flex;
 }
 
 .main-menu ul li {
@@ -70,35 +88,29 @@ a {
     border-radius: 20px;
 }
 
-.wrapper {
-    max-width: 1120px;
-    border: 1px solid red;
-    margin: auto;
-}
-
-.header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    padding: 10px;
-
-}
-
 header {
     background-color: var(--white);
     position: sticky;
     top: 0;
 }
 
-.main-menu {
-    display: flex;
-}
+
 
 /* header styling end */
 
-.hero {
+.hero-wrapper {
+    max-width: 1120px;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    place-content: top;
+
+}
+
+.hero {
+    height: 100%;
     background-color: black;
     background-image: url(images/praha-pozadi.jpg);
     background-repeat: no-repeat;
@@ -107,9 +119,40 @@ header {
     overflow-x: hidden;
 }
 
-.hero-wrapper {
-    max-width: 1120px;
-    height: 100vh;
+h1 {
+    color: var(--white);
+    text-align: center;
+    font-weight: 800;
+    font-size: 4.9em;
+    line-height: 120%;
+    /* padding-bottom: 60px; */
 }
+
+.hero p {
+    color: var(--secondary-color);
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 150%;
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+    padding-bottom: 20px;
+}
+
+.cta-button {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 145%;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    background-color: var(--akcent);
+    padding: 14px 36px;
+    border-radius: 30px;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+    vertical-align: text-top;
+}
+
+
 
 
