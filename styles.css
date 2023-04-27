@@ -1,6 +1,7 @@
 :root {
     --black: #2E2A24;
     --black75: #625F5B;
+    --black50: #969491;
     --black25: #C8C6C1;
     --black5: #F4F3F2;
     --white: #FFFFFF;
@@ -32,6 +33,7 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     color: var(--black);
+    background-color: var(--white);
 }
 
 h1, h2, h3, h4 {
@@ -45,13 +47,20 @@ a {
 
 .wrapper {
     max-width: 1120px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin: auto;
     padding: 10px;
 }
 /*-----------------------------*/
 
 /* header styling start */
+
+header {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 
 .header-wrapper {
     display: flex;
@@ -74,12 +83,15 @@ a {
     text-transform: uppercase;
     font-size: 1.4em;
     font-weight: 600;
-    color: var(--black75);
-    
+    color: var(--black50);
 }
 
 .main-menu ul li a {
     padding: 10px 20px;
+}
+
+.main-menu ul li a:hover {
+    color: var(--black);
 }
 
 .rotary-int {
@@ -92,13 +104,17 @@ a {
     padding: 12px 40px;
 }
 
-header {
-    background-color: var(--white);
-    position: sticky;
-    top: 0;
+.rotary-int:hover {
+    background: var(--secondary-color);
+    color: var(--black);
+    
 }
 
+
+
 /* header styling end */
+
+/* hero section start */
 
 .hero-wrapper {
     max-width: 1120px;
@@ -108,7 +124,7 @@ header {
 
 .hero {
     height: 100vh;
-    background-color: black;
+    background-color: var(--black75);
     background-image: url(images/praha-pozadi.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -122,14 +138,14 @@ h1 {
     font-weight: 700;
     font-size: 4.9em;
     line-height: 120%;
-    margin: 30px auto;
+    margin: 30px auto 90px auto;
 }
 
 .hero p {
     text-align: center;
     color: var(--secondary-color);
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 150%;
     text-transform: capitalize;
     letter-spacing: 0.05em;
@@ -148,6 +164,7 @@ h1 {
     text-align: center;
     display: block;
     margin: auto;
+    
 }
 
 .cta-button img {
@@ -155,9 +172,65 @@ h1 {
     vertical-align: text-top;
 }
 
-.cta-button img::after {
-    content: icon;
+.cta-button:hover {
+    background-color: var(--secondary-color);
+
 }
 
+/* hero section end */
 
+/* Kdo jsme section start */
+h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 60px;
+    margin-left: -60px;
+    position: relative;
+    
+}
 
+h2::before {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    left: -20px;
+    
+}
+
+#kdo-jsme {
+    background: var(--primary-gradient);
+}
+
+.kdo-jsme-wrapper {
+    padding: 140px 15% 120px 15%;
+    color: var(--black5);
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 30px;
+    
+}
+
+.kdo-jsme-wrapper p {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.kdo-jsme-wrapper p:last-of-type {
+    margin-bottom: 0;
+}
+
+.kdo-jsme-wrapper p::before {
+    content: url(icons/chevron-right.svg);
+    position: absolute;
+    top: 0;
+    left: -40px; 
+}
+
+/* Kdo jsme section end */
+
+/* Projekty-aktuality section start */
+/* Projekty-aktuality section start */
