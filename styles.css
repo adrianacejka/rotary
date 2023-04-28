@@ -6,6 +6,7 @@
     --black5: #F4F3F2;
     --white: #FFFFFF;
     --primary-color: #00488C;
+    --primary-color-10: #CCDAE8;
     --secondary-color: #F6AA1C;
     --accent: #9DDFD3;
     --primary-gradient: linear-gradient(123.1deg, #003261 12.28%, #001F3C 78.14%);
@@ -40,6 +41,11 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
 }
 
+h2 {
+    color: var(--black);
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -47,7 +53,7 @@ a {
 
 .wrapper {
     max-width: 1120px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
     padding: 10px;
 }
@@ -80,18 +86,22 @@ header {
 .main-menu ul li {
     list-style-type: none;
     display: inline-block;
-    text-transform: uppercase;
+    /* text-transform: capitalize; */
     font-size: 1.4em;
-    font-weight: 600;
-    color: var(--black50);
+    font-weight: 400;
+    color: var(--black75);
 }
 
 .main-menu ul li a {
     padding: 10px 20px;
 }
 
+.main-menu ul li a:last-of-type {
+    margin-left: 10px;
+}
+
 .main-menu ul li a:hover {
-    color: var(--black);
+    color: var(--primary-color);
 }
 
 .rotary-int {
@@ -101,13 +111,11 @@ header {
     text-transform: capitalize;
     font-weight: 400;
     border-radius: 30px;
-    padding: 12px 40px;
 }
 
 .rotary-int:hover {
     background: var(--secondary-color);
     color: var(--black);
-    
 }
 
 
@@ -174,20 +182,30 @@ h1 {
 
 .cta-button:hover {
     background-color: var(--secondary-color);
-
 }
 
 /* hero section end */
 
+
+
 /* Kdo jsme section start */
+.kdo-jsme-wrapper {
+    padding: 0 15% 120px 15%;
+}
+
 h2 {
-    font-size: 1.8em;
+    font-size: 2.6em;
     font-weight: 700;
     letter-spacing: 0.05em;
     margin-bottom: 60px;
-    margin-left: -60px;
     position: relative;
     
+}
+
+#kdo-jsme h2 {
+    color: var(--black5);
+    padding-top: 140px;
+   
 }
 
 h2::before {
@@ -198,23 +216,17 @@ h2::before {
     position: absolute;
     bottom: -10px;
     left: -20px;
-    
 }
 
 #kdo-jsme {
     background: var(--primary-gradient);
 }
 
-.kdo-jsme-wrapper {
-    padding: 140px 15% 120px 15%;
-    color: var(--black5);
+.kdo-jsme-wrapper p {
     font-size: 1.6em;
     font-weight: 400;
     line-height: 30px;
-    
-}
-
-.kdo-jsme-wrapper p {
+    color: var(--black5);
     margin-bottom: 30px;
     position: relative;
 }
@@ -232,5 +244,92 @@ h2::before {
 
 /* Kdo jsme section end */
 
+/* ---------------------------------- */
+.projekty-aktuality-wrapper,
+.contacts-wrapper {
+    padding: 140px 15px 120px 15px;
+}
+/* ---------------------------------- */
+
 /* Projekty-aktuality section start */
-/* Projekty-aktuality section start */
+
+.cards-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.cards-container h2 { /* nadpis h2 Pomáháme s radostí (mise & vize) */
+    grid-column-start: 1;
+    grid-column-end: -1;  
+
+}
+
+.card {
+    padding: 40px 35px;
+    background-color: var(--black5);
+    color: var(--black);
+    border-radius: 20px;
+    color: var(--black);
+    font-size: 1.4em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.mise-vize-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 30%;
+    justify-content: space-between;
+}
+
+.ikona-mise-vize {
+    display: inline-block;
+    height: 60px;
+}
+
+.mise-vize p {
+    line-height: 1.5em;
+}
+
+.members {
+    border-radius: 20px;
+    display: block; 
+    margin: 60px auto 0 auto;
+    max-width: 600px;
+
+}
+#projekty-aktuality {
+    position: relative;
+}
+.background {
+    width: 100%;
+    height: 500px;
+    /* background-color: var(--primary-color); */
+    background-color: var(--primary-color-10);
+    position: absolute;
+    z-index: -998;
+    top: 45%;
+}
+
+/* Projekty-aktuality section end */
+
+/* Kontakty section start */
+
+.card-contact {
+    background-color: var(--white); 
+}
+
+.distrikt2240 {
+    grid-column: -4 / -1;
+    grid-row: 4 / 5;
+
+
+}
+/* Kontakty section end */
