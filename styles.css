@@ -25,10 +25,15 @@ html {
     font-size: 62.5%; /* 1em = 10px */
 }
 
+html {
+    box-sizing: border-box;
+
+}
+
 *, 
 ::before, 
 ::after {
-    box-sizing: border-box;
+    box-sizing: inherit;
     padding: 0;
     margin: 0;
 }
@@ -123,7 +128,7 @@ header {
 
 .main-menu ul li a {
     padding: 10px 20px;
-    border: 1px solid var(--white);
+    border: 1px solid var(--white); /* zabraňuje poskakování při hoveru, ale dělá zároveň duchy u .rotary-int -- vyřešit*/
     border-radius: var(--border-radius);
 }
 .main-menu ul li a:hover {
@@ -133,8 +138,9 @@ header {
 
 .main-menu ul li a:last-of-type {
     margin-left: 10px;
-
 }
+
+
 
 /* header styling end */
 
@@ -239,7 +245,7 @@ h2::before {
 }
 
 .kdo-jsme-wrapper p::before {
-    content: url(icons/chevron-right.svg);
+    content: url(pics/chevron-right.svg);
     position: absolute;
     top: 0;
     left: -40px; 
@@ -305,12 +311,15 @@ h2::before {
     line-height: 1.5em;
 }
 
-.members {
+.members { 
     border-radius: var(--border-radius);
     display: block; 
     margin: 60px auto 0 auto;
     max-width: 600px;
-
+    width: 550px;
+    /* border: 2px dotted var(--black);
+    padding: 5px;
+    background-color: var(--black); */
 }
 
 #projekty-aktuality {
@@ -332,7 +341,7 @@ h2::before {
 /* ---------------------------------- Kontakty section start */
 
 .cards-container__flex {
-    padding: 0 10%;
+    padding: 0 5%;
     display: flex;
     flex-wrap: no-wrap;
     gap: 30px;
@@ -344,7 +353,6 @@ h2::before {
 .cards-container__flex .card {
     flex: 0 0 30%;
     justify-content: space-between;
-
 }
 
 .card-contact {
@@ -368,7 +376,7 @@ h2::before {
 }
 
 .tel::before {
-    content: url(icons/phone.svg);
+    content: url(pics/phone.svg);
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -378,7 +386,7 @@ h2::before {
 }
 
 .email::before {
-    content: url(icons/mail.svg);
+    content: url(pics/mail.svg);
     display: inline-block;
     position: relative;
     top: 5px;
@@ -418,11 +426,7 @@ h2::before {
 
 .link2240 {
     align-self: center;
-    color: var(--black5);
-    background: var(--primary-gradient);
-    letter-spacing: 0.04em;
-    font-weight: 400;
-    border-radius: var(--border-radius);
+    text-transform: none;
     padding: 12px 22px;
     font-size: 1.4em;
 }
@@ -431,13 +435,13 @@ h2::before {
     cursor: pointer;
 }
 
-/* Kontakty section end */
+/* ----------- Kontakty section end */
 
 
-/* ------------------- footer start */
+/* ------------------- Footer start */
 footer {
     background: var(--primary-gradient);
-    padding: 30px 0;
+    padding: 60px 0;
 }
 
 .footer-container {
