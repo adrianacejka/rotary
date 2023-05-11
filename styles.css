@@ -23,12 +23,10 @@
 
 html {
     font-size: 62.5%; /* 1em = 10px */
-}
-
-html {
     box-sizing: border-box;
-
+    scroll-behavior: smooth;
 }
+
 
 *, 
 ::before, 
@@ -91,7 +89,29 @@ a {
 
 /*=====================================*/
 
-/* header start */
+/* -------------------- header start */
+
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    background-color: var(--primary-color);
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
 
 header {
     background-color: var(--white);
@@ -126,23 +146,22 @@ header {
     
 }
 
-.main-menu ul li a {
+.nav-link {
     padding: 10px 20px;
     border: 1px solid var(--white); /* zabraňuje poskakování při hoveru, ale dělá zároveň duchy u .rotary-int -- vyřešit*/
     border-radius: var(--border-radius);
 }
-.main-menu ul li a:hover {
+.nav-link:hover {
     border: 1px solid var(--secondary-color);
     border-radius: var(--border-radius);
 }
 
-.main-menu ul li a:last-of-type {
+.nav-link:last-of-type {
     margin-left: 10px;
 }
 
-
-
 /* header styling end */
+
 
 /* ------------------------- hero section start */
 
@@ -486,3 +505,60 @@ footer {
 }
 
 /* footer end */
+
+/* --------------- media query ----------- */
+
+@media (max-width: 960px) {
+     
+    .hamburger {
+        cursor: pointer;
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+        /* height: 50vh; */
+        background-color: var(--black);  
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-link {
+        color: var(--white);
+        border: none;
+        
+    }
+
+    .main-menu ul li {
+        display: block;
+        margin: 50px auto;
+    }
+
+    .nav-item {
+        margin: 18px 0;
+        flex-grow: 1;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        
+    }
+}
