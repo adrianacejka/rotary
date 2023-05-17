@@ -22,7 +22,7 @@
 
 
 html {
-    font-size: 62.5%; /* 1em = 10px */
+    font-size: 62.5%; 
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -139,7 +139,6 @@ header {
 .main-menu ul li {
     list-style-type: none;
     display: inline-block;
-    /* text-transform: uppercase; */
     font-size: 1.5em;
     font-weight: 400;
     color: var(--black);
@@ -148,7 +147,7 @@ header {
 
 .nav-link {
     padding: 10px 20px;
-    border: 1px solid var(--white); /* zabraňuje poskakování při hoveru, ale dělá zároveň duchy u .rotary-int -- vyřešit*/
+    border: 1px solid var(--white);
     border-radius: var(--border-radius);
 }
 .nav-link:hover {
@@ -290,7 +289,7 @@ h2::before {
     justify-content: space-between;
 }
 
-.cards-container h2 { /* nadpis h2 Pomáháme s radostí (mise & vize) */
+.cards-container h2 { 
     grid-column-start: 1;
     grid-column-end: -1;  
 
@@ -557,8 +556,6 @@ footer {
         
     }
 
-    /* případně aplikovat pouze na .card__mise-vize a .card-contact zvlášť */
-
     .cards-container,
     .cards-container__flex {
         display: block;
@@ -652,26 +649,27 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
-
-
-    .link-fb {
-        display: block;
-        margin-left: 0;
-        
-    }
-
+@media (max-width: 460px) {
     .follow-fb {
         display: none;
     }
 }
 
+@media (max-width: 400px) {
+
+    .link-fb {
+        display: block;
+        margin-left: 0;
+    }
+
+}
+
 @media (max-width: 360px) {
     .cards-container__flex {
-        
         width: 100%;
-        
     }
 }
+
+
 
 
