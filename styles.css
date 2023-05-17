@@ -581,7 +581,7 @@ footer {
     .card-top {
         flex-shrink: 0;
         flex-basis: 30%;
-        align-self: center;
+        align-self: top;
     }
 
     .contact-info {
