@@ -212,6 +212,7 @@ h1 {
     text-align: center;
     display: block;
     margin: auto;
+    transition: 0.5s ease;
 }
 
 .cta-button img {
@@ -567,6 +568,10 @@ footer {
         
     }
 
+    .hero-wrapper {
+        padding-top: 20%;
+    }
+
     .cards-container,
     .cards-container__flex {
         display: block;
@@ -665,6 +670,11 @@ footer {
 @media (max-width: 460px) {
     .follow-fb {
         display: none;
+    }
+
+    h1 {
+        font-size: 3.5em;
+        line-height: 130%;
     }
 }
 
