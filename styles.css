@@ -556,6 +556,11 @@ footer {
         
     }
 
+<<<<<<< HEAD
+=======
+    /* případně aplikovat pouze na .card__mise-vize a .card-contact zvlášť */
+
+>>>>>>> 65f77f06f84ea873399223db400bf50b507a9506
     .cards-container,
     .cards-container__flex {
         display: block;
@@ -649,12 +654,25 @@ footer {
     }
 }
 
+<<<<<<< HEAD
 @media (max-width: 460px) {
+=======
+@media (max-width: 400px) {
+
+
+    .link-fb {
+        display: block;
+        margin-left: 0;
+        
+    }
+
+>>>>>>> 65f77f06f84ea873399223db400bf50b507a9506
     .follow-fb {
         display: none;
     }
 }
 
+<<<<<<< HEAD
 @media (max-width: 400px) {
 
     .link-fb {
@@ -667,9 +685,19 @@ footer {
 @media (max-width: 360px) {
     .cards-container__flex {
         width: 100%;
+=======
+@media (max-width: 360px) {
+    .cards-container__flex {
+        
+        width: 100%;
+        
+>>>>>>> 65f77f06f84ea873399223db400bf50b507a9506
     }
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 65f77f06f84ea873399223db400bf50b507a9506
